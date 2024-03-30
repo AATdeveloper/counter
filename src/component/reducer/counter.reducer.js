@@ -1,0 +1,19 @@
+import { INCREMENT_COUNTER } from "../ActionTypes";
+
+const initialState = {
+    isLoading:false,
+    count: 0,
+    error: null
+}
+
+export const counterReducer = (state = initialState, action) => {
+   console.log(action);
+    switch (action.type) {
+         case INCREMENT_COUNTER: 
+         return{
+            count :state.count+1
+         }
+         default:
+         return state
+}
+}
